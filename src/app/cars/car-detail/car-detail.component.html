@@ -1,0 +1,31 @@
+
+
+  <div class="row">
+    <div class="col">   <img
+      src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg"
+      alt="{{ car.name }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{car.car}}</h5>
+          <h6 class="card-title">{{car.car_vin}}</h6>
+          <p class="card-text">{{car.car_model}}-{{car.car_color}}-{{car.car_model_year}}</p>
+          <p>{{car.price}}</p>
+          
+ 
+
+          <p [ngClass]="{'stock-available':car.availability,
+            'not-available':!car.availability}">In stock</p>
+        </div>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-primary" (click)="onEditcar()">Edit</button>
+        <button class="btn btn-primary ml-3" (click)="onDeletecar()">Delete</button>
+      </div>
+    </div>
+    </div>
+   
+  
